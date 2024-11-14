@@ -46,18 +46,18 @@ for (let i = 0; i < a.length; i++) {
     a[i].addEventListener('click', function () {
         if (a[i].textContent !== '' || gameOver) {
             
-            return
+            return ""
         }
         a[i].textContent = player
         if (checkWin(player)) {
             result.textContent = `Game over! ${player} wins!`
             gameOver = true 
-            return
+            return ""
         }
         if (checkTie()) {
             result.textContent = "Game is tied!"
             gameOver = true 
-            return
+            return ""
         }
         player = (player === players[0]) ? players[1] : players[0]
         result.textContent = `${player}'s turn!`
